@@ -17,14 +17,24 @@ public class ClockDisplay
     private NumberDisplay hours;
     private NumberDisplay minutes;
     private String displayString;    // simulates the actual display
-    
+    /*
+     * Answer to extra chapter questions:
+     * 29) 60 times
+     * 30) private Rectangle window
+     * window = new rectangle (4,5);
+     * 
+     *   p1.print("filename",true);
+     *   p2.print("files",false);
+     *   
+     *   int.
+     */
     /**
      * Constructor for ClockDisplay objects. This constructor 
      * creates a new clock set at 00:00.
      */
     public ClockDisplay()
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(12);
         minutes = new NumberDisplay(60);
         updateDisplay();
     }
@@ -36,7 +46,7 @@ public class ClockDisplay
      */
     public ClockDisplay(int hour, int minute)
     {
-        hours = new NumberDisplay(24);
+        hours = new NumberDisplay(12);
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
     }
